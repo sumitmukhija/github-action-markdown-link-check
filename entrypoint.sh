@@ -94,6 +94,8 @@ check_errors () {
          cat error.txt
          printf "\n"
          echo -e "${YELLOW}=========================================================================${NC}"
+         value=`cat error.txt`
+         export ERR_TXT=$value
          exit 113
       else
          echo -e "${YELLOW}=========================> MARKDOWN LINK CHECK <=========================${NC}"
